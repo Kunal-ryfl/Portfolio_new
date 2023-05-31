@@ -7,10 +7,6 @@ import {TbCoffee} from 'react-icons/tb'
 
 const font = Fira_Sans({ subsets: ['latin'] ,weight:['400','700','200','600','900']});
 
-export const metadata = {
-  title: 'Kunal Bhardwaj',
-  description: '',
-}
 
 export default function RootLayout({
   children,
