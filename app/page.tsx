@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <div className=' '>
       <h1 className=' text-4xl font-semibold'>Kunal Bhardwaj</h1>
-      <p className=' my-5 text-base'>Hi i'm Kunal. A frontend web developer and coding lover.   </p>
+      <p className=' my-5 text-base'>Hi i&apos;m Kunal. A frontend web developer and coding lover.   </p>
       <Image src={"https://media.licdn.com/dms/image/C4D03AQEP7hT4dZFbpA/profile-displayphoto-shrink_400_400/0/1662795825093?e=1691020800&v=beta&t=oZQNf5ULdQkWcJ_7VxdrQ8AbUzfHbk6zpecdKjRsgJw"} 
       height={100} width={100} alt='dp'
       className=' my-5 rounded-full border-neutral-500  border-2 filter grayscale '
       />
-      <p className='my-5'>I'm currently pursuing my bachelor's in computer science engineering from Panjab University. I was always fascinated about tech. My fascination has been my motivation to get into tech industry. </p>
+      <p className='my-5'>I&apos;m currently pursuing my bachelor&apos;s in computer science engineering from Panjab University. I was always fascinated about tech. My fascination has been my motivation to get into tech industry. </p>
     
     <div className=' grid gap-3   md:grid-cols-3'>
       <Link href={"https://www.linkedin.com/in/kunal-bhardwaj-b07b87217/"}>

@@ -17,7 +17,7 @@ const page = () => {
   return (
     <div  className=''>
               <h1 className=' text-4xl font-semibold'>My Skills</h1>
-              <p className=' my-5 text-base '> I have learn't Java, Javascript, Nextjs, HTML/CSS, Tailwind and Typescript</p>
+              <p className=' my-5 text-base '> I have learn&apos;t Java, Javascript, Nextjs, HTML/CSS, Tailwind and Typescript</p>
               
               <div className=' grid  grid-rows-2  '>
                 
