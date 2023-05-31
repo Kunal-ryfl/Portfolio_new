@@ -3,6 +3,14 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  images:{
+    remotePatterns:[
+      {
+        hostname:"media.licdn.com"
+      }
+        
+    ]
+  }
 }
 
 module.exports = nextConfig
