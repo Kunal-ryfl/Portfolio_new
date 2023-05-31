@@ -19,7 +19,7 @@ const page = () => {
               
               {
                 projects.map((x)=>(
-               <div className=' my-5'>
+               <div key={x.name} className=' my-5'>
                 <Link href={x.link}>
                 <h1  >{x.name}</h1>
                 </Link>
