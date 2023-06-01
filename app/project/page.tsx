@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
+import {Fira_Code} from 'next/font/google'
+const font = Fira_Code({ subsets: ['latin'] });
 
 export const metadata = {
     title: 'Kunal | Projects',
@@ -21,9 +23,9 @@ const page = () => {
                 projects.map((x)=>(
                <div key={x.name} className=' my-5'>
                 <Link href={x.link}>
-                <h1  >{x.name}</h1>
+                <h1 >{x.name}</h1>
                 </Link>
-                <p className=' text-sm text-neutral-500'>{x.des}</p>
+                <p className='text-sm text-neutral-500'>{x.des}</p>
                </div>
 
                 ))

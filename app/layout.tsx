@@ -1,9 +1,5 @@
-// "use client"
-import Link from 'next/link'
 import './globals.css'
-import { usePathname } from 'next/navigation';
 import {Fira_Sans} from 'next/font/google'
-import {TbCoffee} from 'react-icons/tb'
 import Sidebar from './(component)/Sidebar';
 const font = Fira_Sans({ subsets: ['latin'] ,weight:['400','700','200','600','900']});
 

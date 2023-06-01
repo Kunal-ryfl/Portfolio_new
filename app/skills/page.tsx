@@ -23,18 +23,18 @@ const page = () => {
                 
                 <div className=' flex my-5 w-full  justify-evenly'>
 
-              <DiJava className=' text-5xl'/>
-              <DiJavascript1 className=' text-5xl'/>
-              <DiReact className=' text-5xl'/>
-              <TbBrandNextjs className=' text-5xl'/>
+              <DiJava className=' animate-pulse text-5xl'/>
+              <DiJavascript1 className=' animation-delay-500 animate-pulse text-5xl'/>
+              <DiReact className=' animation-delay-1000 animate-pulse text-5xl'/>
+              <TbBrandNextjs className=' animation-delay-1500 animate-pulse text-5xl'/>
                 </div>
                <div className=' my-5 flex w-full  justify-evenly'>
-              <AiFillHtml5 className=' text-5xl'/>
-              <IoLogoCss3 className=' text-5xl'/>
-              <SiTypescript className=' text-4xl'/>
+              <AiFillHtml5 className=' animate-pulse text-5xl'/>
+              <IoLogoCss3 className=' animation-delay-500 animate-pulse text-5xl'/>
+              <SiTypescript className=' animation-delay-1000 animate-pulse text-4xl'/>
                 </div> 
                <div className=' my-5 flex w-full  justify-evenly'>
-              <TbBrandTailwind className=' text-5xl'/>
+              <TbBrandTailwind className=' animate-pulse text-5xl'/>
               
                 </div> 
               </div>
