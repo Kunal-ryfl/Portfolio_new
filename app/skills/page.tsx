@@ -10,10 +10,10 @@ import {SiTypescript} from 'react-icons/si'
 import {IoLogoCss3} from 'react-icons/io'
 import { motion, useAnimate,stagger, usePresence } from "framer-motion";
 
-export const metadata = {
-    title: 'Kunal | Skills',
-    description: '',
-  }
+// export const metadata = {
+//     title: 'Kunal | Skills',
+//     description: '',
+//   }
   
 const Page = () => {
   const [scope, animate] = useAnimate();
