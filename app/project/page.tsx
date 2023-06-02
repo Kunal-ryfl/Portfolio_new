@@ -29,7 +29,7 @@ let projects = [
   },
   { name: "Portfolio", link: "/", des: "My bio and work" },
 ];
-const page = () => {
+const Projects = () => {
   const [isPresent, safeToRemove] = usePresence();
 
   const [scope, animate] = useAnimate();
@@ -60,4 +60,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Projects;
