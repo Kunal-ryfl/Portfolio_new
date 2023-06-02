@@ -38,8 +38,25 @@ const Projects = () => {
     // This "li" selector will only select children
     // of the element that receives `scope`.
     // animate("h1", { opacity: 1 });
+    // animate("h1", { opacity: [0,1] },{ delay:stagger(0.2,{ ease: p => Math.sin(p) }) });
+    if (isPresent) {
+      const enterAnimation = async () => {
     animate("h1", { opacity: [0,1] },{ delay:stagger(0.2,{ ease: p => Math.sin(p) }) });
-  });
+    // await animate("li", { opacity: 1, x: 0 })
+      }
+      enterAnimation()
+
+    } else {
+      const exitAnimation = async () => {
+    animate("h1", { opacity: [1,0] },{ delay:stagger(0.2,{ ease: p => Math.sin(p) }) });
+        safeToRemove()
+      }
+      
+      exitAnimation()
+    }
+ }, [isPresent])
+
+  
 
   return (
     <div>

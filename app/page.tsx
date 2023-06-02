@@ -1,3 +1,5 @@
+"use client"
+import React, { useEffect } from "react";
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import {AiFillLinkedin} from 'react-icons/ai'
@@ -5,12 +7,24 @@ import {AiFillMail} from 'react-icons/ai'
 import {AiFillGithub} from 'react-icons/ai'
 import {BsArrowUpRight} from 'react-icons/bs'
 import Link from 'next/link'
+import { motion, useAnimate,stagger, usePresence } from "framer-motion";
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    // This "li" selector will only select children
+    // of the element that receives `scope`.
+    // animate("h1", { opacity: 1 });
+    animate("p", { opacity: [0,1] },{ delay:stagger(0.2,{ ease: p => Math.sin(p) }) });
+    animate("div", { opacity: [0,1] },{ delay:stagger(0.2,{ ease: p => Math.sin(p) }) });
+    animate("img", { opacity: [0,1] },{ delay:stagger(0.2,{ ease: p => Math.sin(p) }) });
+  });
+
   return (
-    <div className=' '>
+    <div  ref={scope}>
       <h1 className=' text-4xl font-semibold'>Kunal Bhardwaj</h1>
       <p className=' my-5 text-base'>Hi i&apos;m Kunal. A frontend web developer and coding lover.   </p>
       <Image src={"https://media.licdn.com/dms/image/C4D03AQEP7hT4dZFbpA/profile-displayphoto-shrink_400_400/0/1662795825093?e=1691020800&v=beta&t=oZQNf5ULdQkWcJ_7VxdrQ8AbUzfHbk6zpecdKjRsgJw"} 
