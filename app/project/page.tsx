@@ -6,10 +6,10 @@ import { motion, useAnimate,stagger, usePresence } from "framer-motion";
 
 const font = Fira_Code({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Kunal | Projects",
-  description: "",
-};
+// export const metadata = {
+//   title: "Kunal | Projects",
+//   description: "",
+// };
 
 let projects = [
   {
