@@ -22,7 +22,7 @@ const Page = () => {
     // This "li" selector will only select children
     // of the element that receives `scope`.
     // animate("h1", { opacity: 1 });
-    animate("div", { opacity: [0,1],scale:[30,1]},{ delay:stagger(0.2,{ ease: p => Math.sin(p) }) });
+    animate("div", { opacity: [0,1],y:[100,0]},{ duration:1, delay:stagger(0.3,{ ease: p => Math.sin(p) }),type:'tween',bounce:0.3 });
     // animate("div", { opacity: [0,1] },{ delay:stagger(0.2,{ ease: p => Math.sin(p) }) });
     // animate("img", { opacity: [0,1] },{ delay:stagger(0.2,{ ease: p => Math.sin(p) }) });
   });
