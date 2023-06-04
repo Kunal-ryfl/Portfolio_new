@@ -2,21 +2,61 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
+import {motion,LayoutGroup} from 'framer-motion'
+import clsx from 'clsx';
 
+
+const navItems = {
+  '/': {
+    name: 'home',
+  },
+  '/project': {
+    name: 'projects',
+  },
+  '/skills': {
+    name: 'skills',
+  },
+  
+};
 const Sidebar = () => {
-    const path = usePathname()  
+    const pathname = usePathname()  
   return (
+      <LayoutGroup>
     <div className= ' flex md:block gap-4  p-4' >
-         <Link href={'/'}>
-          <h1 className={path === '/'?' transition duration-150 ease-in-out bg-neutral-700 p-2 rounded-sm ':' p-2 transition duration-150 ease-in-out  text-neutral-400' } >Home</h1>
-          </Link>
-          <Link href={'/project'}>
-          <h1 className={path === '/project'?' transition duration-150 ease-in-out bg-neutral-700  p-2 rounded-sm ':' p-2 transition duration-150 ease-in-out text-neutral-400' } >Projects</h1>
-          </Link>
-          <Link href={'/skills'}>
-          <h1 className={path === '/skills'?' transition duration-150 ease-in-out  bg-neutral-700  p-2 rounded-sm ':' p-2 transition duration-150 ease-in-out text-neutral-400' } >Skills</h1>
-          </Link>
+
+          {Object.entries(navItems).map(([path, { name }]) => {
+            const isActive = path === pathname;
+                return (
+                  <Link
+                    key={path}
+                    href={path}
+                    className={clsx(
+                      'transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle',
+                      {
+                        'text-neutral-500': !isActive,
+                        'font-bold': isActive,
+                      }
+                    )}
+                  >
+                    <div className="relative  py-[5px] px-[10px]">
+                      {name}
+                      {path === pathname ? (
+                        <motion.div
+                          className="absolute inset-0 bg-neutral-800 rounded-md z-[-1]"
+                          layoutId="nav"
+                          transition={{
+                            type: 'spring',
+                            stiffness: 350,
+                            damping: 30,
+                          }}
+                          />
+                          ) : null}
+                    </div>
+                  </Link>
+                );
+              })}
 </div>
+              </LayoutGroup>
     
   )
 }
