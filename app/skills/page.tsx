@@ -7,6 +7,7 @@ import {AiFillHtml5} from 'react-icons/ai'
 import {TbBrandNextjs} from 'react-icons/tb'
 import {SiTypescript} from 'react-icons/si'
 import {IoLogoCss3} from 'react-icons/io'
+import * as motion from '../../lib/motion'
 
 export const metadata = {
     title: 'Kunal | Skills',
@@ -17,7 +18,11 @@ const Page = () => {
  
 
   return (
-    <div  className=' overflow-hidden'>
+    <motion.div  className=' overflow-hidden'
+    initial={{opacity:0,y:20}} 
+    animate={{opacity:1,y:0}}
+    exit={{opacity:0,y:0}}
+    >
               <h1 className=' text-4xl font-semibold'>My Skills</h1>
               <p className=' my-5 text-base '> I have learn&apos;t Java, Javascript, Nextjs, HTML/CSS, Tailwind and Typescript</p>
               
@@ -40,7 +45,7 @@ const Page = () => {
               
                 </div> 
               </div>
-    </div>
+    </motion.div>
   )
 }
 

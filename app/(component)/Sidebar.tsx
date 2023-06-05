@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 import {motion,LayoutGroup} from 'framer-motion'
 import clsx from 'clsx';
 
-
 const navItems = {
   '/': {
     name: 'home',

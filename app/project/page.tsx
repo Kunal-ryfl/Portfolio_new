@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import clsx from "clsx";
+import * as motion from '../../lib/motion'
 
 export const metadata = {
   title: "Kunal | Projects",
@@ -19,9 +20,9 @@ let projects = [
     des: "Chat app developed on T3 Stack ",
   },
   {
-    name: "Movie Catalogue",
+    name: "Movie Catalog",
     link: "https://cool-sopapillas-434437.netlify.app/",
-    des: "Movie catalgue to search 10000+ movies",
+    des: "Movie catalog to search 10000+ movies",
   },
   { name: "Portfolio", link: "/", des: "My bio and work" },
 ];
@@ -30,7 +31,11 @@ const Projects = () => {
   
 
   return (
-    <div>
+    <motion.div
+    initial={{opacity:0,y:20}} 
+    animate={{opacity:1,y:0}}
+    exit={{opacity:0,y:0}}
+    >
       <h1 className="  text-4xl font-semibold">My Projects</h1>
 
       <div >
@@ -47,7 +52,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
