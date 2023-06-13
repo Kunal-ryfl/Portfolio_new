@@ -16,7 +16,7 @@ export default function Home() {
     exit={{opacity:0,scale:0.9}}
     >
       <h1 className=' text-4xl font-semibold'>Kunal Bhardwaj</h1>
-      <p className=' my-5 text-base'>Hi i&apos;m Kunal. A frontend web developer and coding lover.   </p>
+      <p className=' my-5 text-base'>Hi i&apos;m Kunal. A full stack web developer and coding lover.   </p>
       <motion.div className=" relative"
        initial={{x:-20,opacity:0}} 
        animate={{x:0,opacity:1}} 
