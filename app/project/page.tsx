@@ -23,17 +23,18 @@ let projects = [
     skills:["T3 stack","social","login"]
   },
   {
+   name:"FileStack",
+   link:"https://file-stack.vercel.app/",
+   des:"Stack your files",
+   skills:["nextjs 13","clerk","uploadthing","planetscale"]
+  },
+  {
     name: "Movie Catalog",
     link: "https://cool-sopapillas-434437.netlify.app/",
     des: "Movie catalog to search 10000+ movies",
     skills:["modal routing","search","categories"]
   },
-  { name: "Portfolio",
-    link: "/",
-    des: "My bio and work",
-    skills:["tailwind","nextjs 13"]
-    
-   },
+  
 ];
 const Projects = () => {
   
