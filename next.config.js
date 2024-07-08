@@ -6,7 +6,7 @@ const nextConfig = {
   images:{
     remotePatterns:[
       {
-        hostname:"media.licdn.com"
+        hostname:"utfs.io"
       }
         
     ]
